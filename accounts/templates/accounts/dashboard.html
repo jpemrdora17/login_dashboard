@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/style.css' %}">
+
+<div class="card">
+    <h2>Welcome, {{ user.username }}!</h2>
+    <p>You are logged in as: {{ user.email }}</p>
+
+    <hr>
+
+    <h3>Student Info</h3>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+
+    <hr>
+
+    <h3>Total Registered Students</h3>
+    <p>{{ total_students }}</p>
+
+    <a href="{% url 'logout' %}"><button>Logout</button></a>
+</div>
